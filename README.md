@@ -1,5 +1,3 @@
-# Form1.css
-ứng dụng ghi chú cá nhân Front end
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
