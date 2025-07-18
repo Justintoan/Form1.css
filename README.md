@@ -14,9 +14,9 @@ using PdfSharp.Pdf;
 using PdfSharp.Drawing;
 using PdfSharp.Drawing.Layout;
 
-
 namespace Đồ_án_lập_trình_ứng_dụng_1__cách_2_
 {
+
     public partial class Form1 : Form
     {
         private List<Note> allNotes; // Danh sách lưu trữ tất cả ghi chú
@@ -32,7 +32,7 @@ namespace Đồ_án_lập_trình_ứng_dụng_1__cách_2_
             UpdateNoteListDisplay();
             UpdateTagFilterComboBox();
         }
-        // Cập nhật ListBox hiển thị danh sách ghi chú
+        // Cập nhật ListBox hiển thị danh sách ghi chú  
         private void UpdateNoteListDisplay(List<Note> notesToDisplay = null)
         {
             if (notesToDisplay == null)
@@ -43,7 +43,7 @@ namespace Đồ_án_lập_trình_ứng_dụng_1__cách_2_
             {
                 displayedNotes = notesToDisplay.OrderByDescending(n => n.CreationDate).ToList();
             }
-
+            
             lstNotes.DataSource = null; // Xóa DataSource cũ để refresh
             lstNotes.DataSource = displayedNotes; // Gán DataSource mới
             // lstNotes.DisplayMember = "Title"; // Hoặc sử dụng ToString() đã override trong class Note
